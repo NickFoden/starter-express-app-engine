@@ -12,23 +12,23 @@ module.exports = {
    * is not required, but may be useful if you have custom/advanced routing
    * requirements.
    */
-  // routes(defineRoutes) {
-  //   return defineRoutes(route => {
-  //     route(
-  //       // The URL path for this route.
-  //       "/pages/one",
-  //       // The path to this route's component file, relative to `appDirectory`.
-  //       "pages/one",
-  //       // Options:
-  //       {
-  //         // The path to this route's data loader, relative to `loadersDirectory`.
-  //         loader: "...",
-  //         // The path to this route's styles file, relative to `appDirectory`.
-  //         styles: "..."
-  //       }
-  //     );
-  //   });
-  // },
+  routes(defineRoutes) {
+    return defineRoutes((route) => {
+      route(
+        // The URL path for this route.
+        "/about",
+        // The path to this route's component file, relative to `appDirectory`.
+        "routes/about"
+        // Options:
+        // {
+        //   // The path to this route's data loader, relative to `loadersDirectory`.
+        //   loader: "...",
+        //   // The path to this route's styles file, relative to `appDirectory`.
+        //   styles: "...",
+        // }
+      );
+    });
+  },
 
   /**
    * The path to the `loaders` directory, relative to remix.config.js. Defaults
@@ -61,5 +61,5 @@ module.exports = {
   /**
    * The port to use when running `remix run`. Defaults to 8002.
    */
-  devServerPort: 8002
+  devServerPort: 8002,
 };
